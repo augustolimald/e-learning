@@ -1,0 +1,35 @@
+{
+  "name": "backend",
+  "author": "Augusto César Rodrigues Lima <augustocesar827@gmail.com>",
+  "version": "1.0.0",
+  "main": "src/server.js",
+  "license": "MIT",
+  "scripts": {
+    "test": "jest --verbose",
+    "dev": "nodemon src/server.js",
+    "clean": "rm -r -f dist/*",
+    "prebuild": "npm run clean",
+    "build": "sucrase ./src -d ./dist --transforms imports",
+    "start": "node dist/server.js"
+  },
+  "dependencies": {
+    "@hapi/joi": "^16.1.7",
+    "@sucrase/jest-plugin": "^2.0.0",
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^8.1.0",
+    "express": "^4.17.1",
+    "faker": "^4.1.0",
+    "jest": "^24.9.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.7.4",
+    "multer": "^1.4.2",
+    "sucrase": "^3.10.1",
+    "supertest": "^4.0.2"
+  },
+  "devDependencies": {
+    "eslint": "^6.5.1",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.18.2",
+    "nodemon": "^1.19.3"
+  }
+}
