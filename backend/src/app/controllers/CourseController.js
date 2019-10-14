@@ -8,7 +8,7 @@ class CourseController {
     return response.status(200).json(courses.map((course) => ({
       id: course.id,
       title: course.title,
-      image: course.image,
+      image: `${process.env.SERVER_URL}:${process.env.SERVER_PORT}/image/${course.image}`,
     })));
   }
 
@@ -20,7 +20,13 @@ class CourseController {
       return response.status(404).json({ err: 'Curso não encontrado' });
     }
 
-    return response.status(200).json(course);
+    return response.status(200).json({
+      id: course.id,
+      title: course.title,
+      image: `${process.env.SERVER_URL}:${process.env.SERVER_PORT}/image/${course.image}`,
+      classes: course.classes,
+      creator: course.creator,
+    });
   }
 
   async store(request, response) {
@@ -28,6 +34,7 @@ class CourseController {
 
     const schema = Joi.object({
       title: Joi.string().required(),
+      image: Joi.string().default('default-course.jpeg'),
 
       classes: Joi.array().items(Joi.object({
         title: Joi.string().required(),
@@ -50,7 +57,7 @@ class CourseController {
     const course = new Course({ ...value, creator: userId });
     await course.save();
 
-    return response.status(200).json(course);
+    return response.status(201).json(course);
   }
 }
 
