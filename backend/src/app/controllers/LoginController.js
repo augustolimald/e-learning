@@ -32,6 +32,7 @@ class LoginController {
       id: user.id,
       name: user.name,
       email: user.email,
+      image: `${process.env.SERVER_URL}:${process.env.SERVER_PORT}/image/${user.image}`,
       token: sign(
         { id: user.id },
         config.secret,
