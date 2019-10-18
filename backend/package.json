@@ -5,7 +5,6 @@
   "main": "src/server.js",
   "license": "MIT",
   "scripts": {
-    "test": "jest --verbose",
     "dev": "nodemon src/server.js",
     "clean": "rm -r -f dist/*",
     "prebuild": "npm run clean",
