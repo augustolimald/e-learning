@@ -1,6 +1,11 @@
 node_modules/
-tmp/certificate/*
-tmp/img/*
-dist/
 .env
+dist/
 
+tmp/certificate/*
+!tmp/certificate/.gitkeep
+
+tmp/img/*
+!tmp/img/.gitkeep
+!tmp/img/default-user.png
+!tmp/img/default-course.jpeg
