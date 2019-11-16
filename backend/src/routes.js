@@ -13,13 +13,13 @@ routes.post('/login', controllers.Login.login);
 routes.post('/upload', upload.single('file'), controllers.Image.store);
 routes.use('/image', express.static(resolve(__dirname, '..', 'tmp', 'img')));
 routes.use('/certificate', express.static(resolve(__dirname, '..', 'tmp', 'certificate')));
+routes.get('/courses', controllers.Course.index);
 
 routes.use(authentication);
 
 routes.get('/users/:id', controllers.User.show);
 routes.get('/users/:id/subscriptions', controllers.Subscription.index);
 routes.post('/courses', controllers.Course.store);
-routes.get('/courses', controllers.Course.index);
 routes.get('/courses/:id', controllers.Course.show);
 routes.post('/courses/:id/subscribe', controllers.Subscription.store);
 routes.post('/courses/:id/progress', controllers.Subscription.progress);
