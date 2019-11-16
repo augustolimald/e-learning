@@ -2,8 +2,13 @@ import Joi from '@hapi/joi';
 import Course from '../schemas/Course';
 
 class CourseController {
-  async index(_, response) {
-    const courses = await Course.find();
+  async index(request, response) {
+    const options = {};
+    if (request.query.search) {
+      options.title = new RegExp(request.query.search, 'i');
+    }
+
+    const courses = await Course.find(options);
 
     return response.status(200).json(courses.map((course) => ({
       id: course.id,
