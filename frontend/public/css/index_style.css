@@ -1,0 +1,27 @@
+* {
+    margin 0;
+}
+
+.container .row .col-md-6 {
+    padding: 100px 30px 50px 50px;
+}
+
+.card {
+    width: 33%; 
+    padding: 10px;
+    float: left;
+}
+
+.img {
+    float: left;
+}
+
+footer .row {
+    margin-left: 5%;
+}
+
+footer {
+    background: rgb(246, 243, 243);
+    margin:0; 
+    padding: 20px;
+}

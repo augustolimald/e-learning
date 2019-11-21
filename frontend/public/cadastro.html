@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Le-Arning</title>
+        
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/cadastro_style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <script src="js/cadastro.js"></script>
+    </head>
+    <body>
+        <div class="imagem">
+
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                        <div><h3>Cadastro</h3></div>
+                        <div>
+                            <div class="form-group">
+                                <label for="exampleInputNome1">Nome</label>
+                                <input type="text" class="form-control" id="exampleInputNome1" aria-describedby="nomeHelp" placeholder="Digite seu Nome">
+                                
+                            </div>
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Email</label>
+                                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Digite seu Email">
+                                    <small id="emailHelp" class="form-text text-muted">Vamos encher seu email de span! hehe</small>
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputSenha1">Senha</label>                                        <input type="password" class="form-control" id="exampleInputSenha1" placeholder="Digite sua Senha">
+                                </div>
+                                
+                                <label for="exampleInputFile1">Imagem</label>
+                                <div class="custom-file">
+                                        <input onChange="changePic()" type="file" class="custom-file-input" id="customFileLang" accept="image/*">
+                                        <label class="custom-file-label" id="picLabel" for="customFileLang">Selecionar Imagem</label>
+                                </div>
+                                <br><br>
+                                <button onClick="send()" class="btn btn-primary">Enviar</button>
+                            </div>
+                    </div>
+            </div>
+        </div>
+    </body>
+</html>
+        

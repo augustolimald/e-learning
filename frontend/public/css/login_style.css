@@ -1,0 +1,21 @@
+* {
+    margin: 0;
+}
+
+
+.container {
+    margin-top: 15%;
+    padding: 70px;
+    width: 40%;
+    float: left;
+}
+
+.imagem {
+    position: absolute;
+    left: 40%;
+    float: left;
+    width: 60%;
+    height: 100%;
+    background: url('../img/fundo_login1.png') 10% 70% no-repeat;
+    
+}
