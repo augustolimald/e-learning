@@ -1,5 +1,5 @@
 if (window.localStorage.getItem('token')) {
-  window.location.href = 'dashboard.html';
+  window.location.href = 'user/dashboard.html';
 }
 
 async function login() {
@@ -18,8 +18,12 @@ async function login() {
   if (request.status !== 200) {
     alert('Erro no login');
   } else {
-    window.localStorage.setItem('token', request.body.token);
-    window.localStorage.setItem('id', request.body.id);
-    window.location.href = 'dashboard.html';
+    const response = await request.json();
+    window.localStorage.setItem('token', response.token);
+    window.localStorage.setItem('id', response.id);
+    window.localStorage.setItem('name', response.name);
+    window.localStorage.setItem('email', response.email);
+    window.localStorage.setItem('image', response.image);
+    window.location.href = 'user/dashboard.html';
   }
 }

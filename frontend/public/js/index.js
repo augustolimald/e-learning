@@ -5,11 +5,8 @@ fetch("http://localhost:5010/courses", {
     'Content-Type': 'application/json',
   }
 }).then(response => response.json()).then(response => {
-  console.log(response)
-
   const courses = response.splice(0,3);
   courses.forEach((course, index) => {
-    console.log(index)
     document.getElementsByClassName("card-title")[index].innerHTML = course.title;
     document.getElementsByClassName("card-img-top")[index].src = course.image;
     document.getElementsByClassName("d-block")[index].src = course.image;
