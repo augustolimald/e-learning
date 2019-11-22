@@ -31,6 +31,7 @@ class CourseController {
       image: `${process.env.SERVER_URL}:${process.env.SERVER_PORT}/image/${course.image}`,
       classes: course.classes,
       creator: course.creator,
+      final_test: course.final_test.map(ft => ({description: ft.description, options: ft.options}))
     });
   }
 

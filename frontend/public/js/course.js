@@ -110,3 +110,8 @@ function submit (id) {
     }
   });;
 }
+
+function sair () {
+  window.localStorage.clear();
+  window.location.href = '../index.html'
+}
