@@ -22,7 +22,6 @@ routes.get('/users/:id/subscriptions', controllers.Subscription.index);
 routes.post('/courses', controllers.Course.store);
 routes.get('/courses/:id', controllers.Course.show);
 routes.post('/courses/:id/subscribe', controllers.Subscription.store);
-routes.post('/courses/:id/progress', controllers.Subscription.progress);
 routes.post('/courses/:id/final_test', controllers.Subscription.submit);
 routes.get('/courses/:id/certificate', controllers.Subscription.certificate);
 

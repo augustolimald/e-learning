@@ -82,7 +82,7 @@ class SubscriptionController {
       0,
     );
 
-    const percent = (answersCorrect / course.final_test.length) * 100;
+    const percent = ((answersCorrect / course.final_test.length) * 100).toFixed(1);
     if (percent > subscription.testGrade) {
       subscription.testGrade = percent;
     }
@@ -95,35 +95,10 @@ class SubscriptionController {
       answersCorrect,
       totalAnswers: value.questions.length,
       percent,
-      status: (percent > 60) ? 'Aprovado' : 'Reprovado',
+      status: (percent > 70) ? 'Aprovado' : 'Reprovado',
     });
   }
-
-  async progress(request, response) {
-    const course = await Course.findById(request.params.id);
-    if (!course) {
-      return response.status(404).json({ err: 'Curso não encontrado' });
-    }
-
-    const subscription = await Subscription.findOne({
-      user: request.headers.userId,
-      course: course.id,
-    });
-    if (!subscription) {
-      return response.status(400).json({ err: 'Esse usuário não está inscrito nesse curso' });
-    }
-
-    const { courseClass } = request.body;
-    const { id: courseId } = course.classes.find((cClass) => cClass.id === courseClass);
-    if (!courseClass || !courseId) {
-      return response.status(404).json({ err: 'Esse curso não possui essa aula' });
-    }
-
-    subscription.lastClass = courseId;
-    await subscription.save();
-    return response.status(200).json(subscription);
-  }
-
+  
   async certificate(request, response) {
     const user = await User.findById(request.headers.userId);
     const course = await Course.findById(request.params.id);
