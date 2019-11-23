@@ -75,6 +75,7 @@ function loadCourse(id) {
       });
     });
     divProva.appendChild(document.createElement('br'))
+    divProva.appendChild(document.createElement('br'))
   });
 }
 
