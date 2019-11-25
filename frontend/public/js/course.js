@@ -34,21 +34,38 @@ function loadCourse(id) {
 
     const divAulas = document.getElementById('aulas');
     course.classes.forEach(classe => {
-      const h3 = document.createElement('h3');
-      h3.innerHTML = classe.title;
-      divAulas.appendChild(h3);
-
+      const divAula = document.createElement('div');
+      divAula.className = "row";
+      
+      const divVideo = document.createElement('div');
+      divVideo.className = "col-md-6";
       const iframe = document.createElement('iframe');
       iframe.width = '420';
       iframe.height = '315';
       iframe.src = classe.video_url;
-      divAulas.appendChild(iframe);
+      iframe.className = "col-md-6";
+      divVideo.appendChild(iframe);
+      divAula.appendChild(divVideo);
+
+      const divText = document.createElement('div');
+      divText.className = "col-md-6";
+
+      const h3 = document.createElement('h3');
+      h3.innerHTML = classe.title;
+      h3.style = "text-align: left";
+      divText.appendChild(h3);
+      divText.appendChild(document.createElement('br'));
 
       const p = document.createElement('p');
       p.className = '';
       p.innerHTML = classe.text;
-      divAulas.appendChild(p);
+      p.style = "text-align: left";
+      divText.appendChild(p);
 
+      divAula.appendChild(divText);
+      
+      divAulas.appendChild(divAula);
+      divAulas.appendChild(document.createElement('br'));
       divAulas.appendChild(document.createElement('br'));
     });
 
@@ -57,6 +74,7 @@ function loadCourse(id) {
       const p = document.createElement('p');
       p.className = 'descriptionsParagraph';
       p.innerHTML = test.description;
+      p.style = "margin-top: 50px;";
       divProva.appendChild(p);
 
       test.options.forEach((option, index1) => {
@@ -74,8 +92,8 @@ function loadCourse(id) {
         divProva.appendChild(document.createElement('br'))
       });
     });
-    divProva.appendChild(document.createElement('br'))
-    divProva.appendChild(document.createElement('br'))
+    //divProva.appendChild(document.createElement('br'))
+    //divProva.appendChild(document.createElement('br'))
   });
 }
 

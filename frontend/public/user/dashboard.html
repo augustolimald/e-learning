@@ -11,21 +11,42 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script src="../js/dashboard.js"></script>
+    <style>
+      .card {
+        margin: 5px;
+      }
+
+      .row {
+        margin: 0% 2% 2% 2%;
+        justify-content: center;
+      }
+    </style>
   </head>
 
   <body class="bg-dark">
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-      <a class="navbar-brand" href="#">
-        <img id="avatar" alt="Logo" style="width:40px;">
-      </a>
-      <a id="nome" class="navbar-brand" href="#"></a>
-      <a class="navbar-brand" href="#" onclick="sair()">Sair</a>
-      <form class="form-inline">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <img id="avatar" alt="Logo" style="width:40px;">
+        </li>
+        &nbsp;&nbsp;&nbsp;
+        <li class="nav-item">
+          <a id="nome" class="navbar-brand" href="#"></a>
+        </li>
+
+        <li class="nav-item">
+          <a class="navbar-brand" href="#" onclick="sair()"><span style="font-size: 13px;">Sair</span></a>
+        </li>
+      </ul>
+
+      <form class="form-inline my-2 my-lg-0">
         <input id="searchField" class="form-control mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
-        <button onclick="search(); event.preventDefault();" class="btn btn-outline-success my-2 my-sm-0" type="submit">Pesquisar</button>
+        <button onclick="search(); event.preventDefault();" class="btn btn-primary my-2 my-sm-0" type="submit">Pesquisar</button>
       </form>
     </nav>
 
-    <div id="courses"></div>
+    <div id="courses" class="row">
+      <div></div>
+    </div>
   </body>
 </html>

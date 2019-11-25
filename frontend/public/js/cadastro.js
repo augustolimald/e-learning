@@ -15,13 +15,15 @@ async function uploadImage() {
 }
 
 async function send() {
-  const filename = await uploadImage();
   const user = {
       name: document.getElementById("exampleInputNome1").value,
       email: document.getElementById("exampleInputEmail1").value,
       password: document.getElementById("exampleInputSenha1").value,
-      image: filename,
   };
+
+  if (document.getElementById('customFileLang').files.length === 1) {
+    user.filename = await uploadImage();
+  }
 
   const request = await fetch("http://localhost:5010/users", {
       method: "POST",

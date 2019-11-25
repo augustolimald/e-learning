@@ -31,7 +31,7 @@ function loadCourses (search) {
   }).then(response => response.json()).then(response => {
     response.forEach(course => {
       const divCard = document.createElement('div');
-      divCard.className = 'card bg-secondary';
+      divCard.className = 'card bg-secondary col-md-3';
       divCard.style = 'width: 18rem; align: center';
 
       const img = document.createElement('img');
@@ -43,11 +43,12 @@ function loadCourses (search) {
 
       const h5 = document.createElement('h5');
       h5.className = 'card-title';
+      h5.style = "color: #212020"
       h5.innerHTML = course.title;
       
       const a = document.createElement('a');
       a.id = course.id;
-      a.className = 'btn btn-success';
+      a.className = 'btn btn-primary';
       a.href = "#";
       a.onclick = function (event) { event.preventDefault(); subscribe(course.id); };
       a.innerHTML = "Inscrever"
