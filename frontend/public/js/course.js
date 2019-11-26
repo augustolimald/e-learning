@@ -35,14 +35,17 @@ function loadCourse(id) {
     const divAulas = document.getElementById('aulas');
     course.classes.forEach(classe => {
       const divAula = document.createElement('div');
-      divAula.className = "row";
+      divAula.className = "row bg-secondary";
+      divAula.style = "padding: 15px; margin-left: 3%; margin-right: 3% ; border-radius: 8px;";
       
       const divVideo = document.createElement('div');
       divVideo.className = "col-md-6";
       const iframe = document.createElement('iframe');
-      iframe.width = '420';
-      iframe.height = '315';
+      iframe.style = "border: 0";
+      iframe.width = '100%';
+      iframe.height = '100%';
       iframe.src = classe.video_url;
+      iframe.src = 'https://www.youtube.com/embed/1xdzJzGpUYY';
       iframe.className = "col-md-6";
       divVideo.appendChild(iframe);
       divAula.appendChild(divVideo);
@@ -92,8 +95,6 @@ function loadCourse(id) {
         divProva.appendChild(document.createElement('br'))
       });
     });
-    //divProva.appendChild(document.createElement('br'))
-    //divProva.appendChild(document.createElement('br'))
   });
 }
 
