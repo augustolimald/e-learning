@@ -45,7 +45,6 @@ function loadCourse(id) {
       iframe.width = '100%';
       iframe.height = '100%';
       iframe.src = classe.video_url;
-      iframe.src = 'https://www.youtube.com/embed/1xdzJzGpUYY';
       iframe.className = "col-md-6";
       divVideo.appendChild(iframe);
       divAula.appendChild(divVideo);
