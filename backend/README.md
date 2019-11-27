@@ -1,7 +1,6 @@
 # Backend E-Learning
 
 O backend consiste em uma API REST, implementada com o NodeJS em conjunto com um banco de dados não-relacional MongoDB.
-Essa etapa do trabalho ficou sob responsabilidade do aluno Augusto César Rodrigues Lima.
 
 [Rotas da API](https://app.swaggerhub.com/apis-docs/Augusto9/e-learning/1.0.0)
 
@@ -21,7 +20,7 @@ Passo-a-passo para colocar o sistema em execução:
 - Foi utilizado o Sucrase para poder executar os imports/exports no padrão ES6.
 - Foi utilizado o ODM Mongoose para a conexão com o banco de dados.
 - Foi utilizado autenticação JWT para segurança
-- A validação foi feita usando o Joi
+- A validação dos dados foi feita usando o Joi
 - A documentação foi feita usando o Swagger
 - A certificação em pdf foi feita usando o PDFKit
 - As rotas de métodos PUT e DELETE não foram implementadas, a fim de diminuir a complexidade do sistema.
