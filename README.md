@@ -12,10 +12,9 @@ Para desenvolver o sistema, iremos utilizar o framework Express no NodeJS no lad
 ## Funcionalidades
 O sistema deve apresentar as seguintes funcionalidades ao usuário:
 - Cadastrar seu usuário.
-- Cadastrar um curso.
 - Se inscrever em um curso.
 - Fazer as aulas de um curso.
-- Fazer o teste final de um curso.
+- Fazer o teste final de um curso (com certificado).
 
 ## Escopo
 - Cada usuário terá nome, email e senha.
@@ -29,3 +28,6 @@ Por não ser um sistema com objetivos comerciais, diversas funções foram inten
 - Alteração e deleção de usuários.
 - Recuperação de Senha.
 - Comunicação por email.
+- Cadastro de cursos.
+- Sistema de pagamentos.
+- Chat entre professor e aluno.
