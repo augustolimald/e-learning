@@ -14,6 +14,9 @@ Passo-a-passo para colocar o sistema em execução:
 6) Executar npm run build para construir a API.
 7) Executar npm run start para executar a API.
 
+## Banco de Dados
+O grupo optou pelo MongoDB, um banco de dados não relacional muito performático. Não existem justificativas técnicas para sua escolha no projeto em questão. Como o objetivo era desenvolver de forma ágil, ele se tornou uma boa opção, já que não necessita de criar toda uma estrutura com diversos relacionamentos assim como nos bancos relacionais.
+
 ## Detalhes técnicos:
 - Foi utilizado o framework Express.
 - Foi utilizado a guia de estilos do AirBnb com o plugin ESLint.
