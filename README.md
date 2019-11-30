@@ -7,20 +7,21 @@ O objetivo é desenvolver um sistema de e-learning usando algum paradigma de pro
 
 ## Motivação
 A escolha da linguagem Javascript se deu pela sua crescente utilização no mercado de trabalho e pela sua versatilidade: com uma uma única linguagem de programação é possível desenvolver aplicações web, backend e frontend, mobile e desktop.
-Para desenvolver o sistema, iremos utilizar o framework Express no NodeJS no lado do backend e o framework React no frontend, principalmente pelo domínio que os membros do grupo apresentam com tais frameworks.
+Para desenvolver o sistema, iremos utilizar o framework Express no NodeJS no lado do backend e Bootstrap no frontend, principalmente pelo domínio que os membros do grupo apresentam com tais tecnologias.
 
 ## Funcionalidades
 O sistema deve apresentar as seguintes funcionalidades ao usuário:
 - Cadastrar seu usuário.
-- Se inscrever em um curso.
+- Inscrição em um curso.
 - Fazer as aulas de um curso.
-- Fazer o teste final de um curso (com certificado).
+- Fazer o teste final de um curso.
+- Gerar seu certificado, caso aprovado.
 
 ## Escopo
 - Cada usuário terá nome, email e senha.
 - Cada curso terá um título, várias aulas e um teste final. 
 - Cada aula possui um vídeo (link para o youtube) e uma descrição textual.
-- Cada teste final possui várias questões, cada uma com 5 alternativas, sendo apenas 1 correta.
+- Cada teste final possui várias questões, cada uma com uma quantidade dinâmica de alternativas, sendo apenas 1 correta.
 - O aluno que tiver um desempenho acima de 70% poderá solicitar seu certificado.
 
 ## Limitações
@@ -31,3 +32,8 @@ Por não ser um sistema com objetivos comerciais, diversas funções foram inten
 - Cadastro de cursos.
 - Sistema de pagamentos.
 - Chat entre professor e aluno.
+
+## Divisão das tarefas
+- Augusto Lima - Desenvolvimento do backend e integração front-back end
+- Gabriel Franco - Desenvolvimento do Frontend
+- Vinícus Carvalho - Desenvolvimento do Fronted
