@@ -30,7 +30,7 @@ O grupo optou pelo MongoDB, um banco de dados não relacional muito performátic
 
 ## Como cadastrar um curso?
 Como não foi desenvolvido uma tela para cadastro de cursos, essa funcionalidade deve ser feita diretamente pelo backend.
-1) Acesse a [documentação do Swagger](https://app.swaggerhub.com/apis-docs/Augusto9/e-learning/1.0.0), você pode fazer requisições diretamente por lá utilizando o botão "Try it Out"
+1) Acesse a [documentação do Swagger](https://app.swaggerhub.com/apis-docs/Augusto9/e-learning/1.0.0), você pode fazer requisições diretamente por lá utilizando o botão "Try it Out" de cada rota
 2) Autentique seu usuário (rota POST /login)
 3) Copie o token, clique no botão "Authorize" (canto superior direito) e cole lá
 4) Faça upload da imagem (rota POST /upload) e copie o filename do retorno
